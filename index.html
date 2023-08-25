@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3><a href="phpinfo.php">phpinfo.php</a></h3>
+  <ul>
+    <li>3.1 HTTPとセッション管理</li>
+    <ul>
+      <li><a href="./31/31-001.php">31-001 現在時刻</a></li>
+      <li><a href="./31/31-002.php">31-002 入力-確認-登録</a></li>
+      <li><a href="./31/31-010.php">31-010 Basic認証</a></li>
+      <li><a href="./31/31-020.php">31-020 ログイン</a></li>
+    </ul>
+    <li>3.2 受動的攻撃と同一オリジンポリシー</li>
+    <ul>
+      <li><a href="./32/32-001.html">32-001 iframeの実験</a></li>
+    </ul>
+    <li>3.3 CORS (Cross-Origin Resource Sharing)</li>
+    <ul>
+      <li><a href="./33/33-001.html">33-001 シンプルなリクエスト</a></li>
+      <li>要点</li>
+      <ul>
+        <li>シンプルなリクエストとは、<a
+            href="https://developer.mozilla.org/ja/docs/Web/HTTP/CORS#%E5%8D%98%E7%B4%94%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">この条件</a>を満たすリクエストのことをいう
+        </li>
+        <li>シンプルなリクエストではない場合、ブラウザがプリフライトリクエストというものを送信する</li>
+        <li>プリフライトリクエストはOPTIONSメソッドで送信される</li>
+        <li>API側は、そのプリフライトリクエストに対して応答しなければならない</li>
+        <li>ブラウザ側は「Access-Control-Request-○○: xxx」というリクエストをして、API側は「Access-Control-Allow-○○: xxx」というレスポンスを返して許可する。</li>
+      </ul>
+      <li>プリフライトリクエスト</li>
+      <ul>
+        <li><a href="./33/33-003.html">33-003 Content-Type: application/jsonを指定する</a></li>
+        <li><a href="./33/33-003a.html">33-003a プリフライトリクエストに応答するようにする</a></li>
+        <li><a href="./33/33-003b.html">33-003b 33-003aのphp側のレスポンスを実装した版</a></li>
+      </ul>
+    </ul>
+    <li>4.1 Webアプリケーションの機能と脆弱性の対応</li>
+    <ul>
+      <li><a href="./42/42-002.php?p=1">eregによる数値の検査</a></li>
+      <li><a href="./42/42-002.php?p=1%00<script>alert(%27XSS%27)</script>">ereg回避リンク</a></li>
+    </ul>
+  </ul>
+</body>
+
+</html>
